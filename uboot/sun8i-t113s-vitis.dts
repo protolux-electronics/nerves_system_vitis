@@ -27,14 +27,14 @@
 		led-0 {
 			color = <LED_COLOR_ID_GREEN>;
 			function = LED_FUNCTION_HEARTBEAT;
-			gpios = <&pio 3 18 GPIO_ACTIVE_HIGH>; /* PD18 */
+			gpios = <&pio 3 3 GPIO_ACTIVE_HIGH>; /* PD3 */
 		};
 
-		led-1 {
-			color = <LED_COLOR_ID_GREEN>;
-			function = LED_FUNCTION_STATUS;
-			gpios = <&pio 3 17 GPIO_ACTIVE_HIGH>; /* PD17 */
-		};
+		// led-1 {
+		// 	color = <LED_COLOR_ID_AMBER>;
+		// 	function = LED_FUNCTION_STATUS;
+		// 	gpios = <&pio 3 4 GPIO_ACTIVE_HIGH>; /* PD4 */
+		// };
 	};
 
 	reg_vcc5v: regulator-5v {
