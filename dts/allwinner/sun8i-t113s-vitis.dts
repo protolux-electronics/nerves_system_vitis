@@ -28,18 +28,12 @@
 	leds {
 		compatible = "gpio-leds";
 
-		// led-0 {
-		// 	color = <LED_COLOR_ID_AMBER>;
-		// 	function = LED_FUNCTION_STATUS;
-		// 	gpios = <&pio 3 18 GPIO_ACTIVE_HIGH>; /* PD18 */
-		// };
-
-		// led-1 {
-		// 	color = <LED_COLOR_ID_GREEN>;
-		// 	function = LED_FUNCTION_STATUS;
-		// 	gpios = <&pio 3 17 GPIO_ACTIVE_HIGH>; /* PD17 */
-		// 	linux,default-trigger = "heartbeat";
-		// };
+		led-1 {
+			color = <LED_COLOR_ID_GREEN>;
+			function = LED_FUNCTION_STATUS;
+			gpios = <&pio 3 3 GPIO_ACTIVE_HIGH>; /* PD3 */
+			linux,default-trigger = "heartbeat";
+		};
 	};
 
 	reg_vcc5v: regulator-5v {
@@ -193,12 +187,6 @@
 	  spi-max-frequency = <10000000>;
 	};
 };
-
-// &i2c1 {
-// 	pinctrl-names = "default";
-// 	pinctrl-0 = <&i2c1_pe_pins>;
-// 	status = "okay";
-// };
 
 &mixer0 {
 	status = "disabled";
