@@ -31,7 +31,7 @@
 		led-1 {
 			color = <LED_COLOR_ID_GREEN>;
 			function = LED_FUNCTION_STATUS;
-			gpios = <&pio 3 3 GPIO_ACTIVE_HIGH>; /* PD3 */
+			gpios = <&pio 3 4 GPIO_ACTIVE_HIGH>; /* PD4 */
 			linux,default-trigger = "heartbeat";
 		};
 	};
@@ -63,12 +63,10 @@
 
 &cpu0 {
 	cpu-supply = <&reg_vcc_core>;
-	clock-frequency = <1000000000>;
 };
 
 &cpu1 {
 	cpu-supply = <&reg_vcc_core>;
-	clock-frequency = <1000000000>;
 };
 
 &rtc {
